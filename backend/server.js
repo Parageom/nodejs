@@ -27,7 +27,7 @@ app.get("/view", function (request, response) {
 app.post('/savedetails/:param', function (request, response) {
   var data = request.params.param.split(';');
 
-  const sql = "INSERT into Movie (name, genre, releasedate, agelimit, runningtime) values ('" + data[0] + "', '" + data[1] + "', '" + data[2] + "', '" + data[3] + "', '" + data[4] + "', '" + data[5] + "')";
+  const sql = "INSERT into Movie (name, genre, releasedate, agelimit, runningtime) values ('" + data[0] + "', '" + data[1] + "', '" + data[2] + "', '" + data[3] + "', '" + data[4] + "')";
   console.log(sql);
   db.run(sql);
   console.log("New data added");
